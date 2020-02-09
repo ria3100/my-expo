@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/native'
 
-import { Card, CardItem, Body, View, Text, Segment, Button } from 'native-base'
+import { Card, CardItem, Body, View, Text } from 'native-base'
 
 const Wrap = styled.View({
   flex: 1,
@@ -14,7 +14,7 @@ const Wrap = styled.View({
   borderWeight: 10,
 })
 
-export default () => {
+const Summary = () => {
   return (
     <Wrap>
       <View style={{ width: '80%' }}>
@@ -35,3 +35,5 @@ export default () => {
     </Wrap>
   )
 }
+
+export default Summary

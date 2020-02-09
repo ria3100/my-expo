@@ -10,5 +10,7 @@
     "removeComments": true,
     "strict": true,
     "noImplicitAny": false,
+    "baseUrl": ".",
+    "sourceMap": true,
   }
 }

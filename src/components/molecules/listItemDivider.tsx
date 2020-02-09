@@ -5,7 +5,7 @@ type Props = {
   title: string
   caption?: string
 }
-export default ({ title, caption }: Props) => {
+const ListItemDivider = ({ title, caption }: Props) => {
   return (
     <ListItem itemDivider style={{ backgroundColor: '#e25e46' }}>
       <Body>
@@ -17,3 +17,5 @@ export default ({ title, caption }: Props) => {
     </ListItem>
   )
 }
+
+export default ListItemDivider

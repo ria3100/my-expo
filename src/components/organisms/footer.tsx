@@ -1,9 +1,9 @@
 import React from 'react'
-import { Footer, FooterTab, Button, Icon, Text } from 'native-base'
+import { Footer as NBFooter, FooterTab, Button, Icon, Text } from 'native-base'
 
-export default () => {
+const Footer = () => {
   return (
-    <Footer>
+    <NBFooter>
       <FooterTab>
         <Button vertical active>
           <Icon active name="apps" />
@@ -18,6 +18,8 @@ export default () => {
           <Text>捕まえた</Text>
         </Button>
       </FooterTab>
-    </Footer>
+    </NBFooter>
   )
 }
+
+export default Footer

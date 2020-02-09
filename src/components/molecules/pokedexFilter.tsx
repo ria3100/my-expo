@@ -1,19 +1,19 @@
 import React from 'react'
 import { Picker, Form } from 'native-base'
 
-enum Sort {
-  Number,
-  Name,
-  Get,
-  NoGet,
-}
+// enum Sort {
+//   Number,
+//   Name,
+//   Get,
+//   NoGet,
+// }
 
 type Props = {
   sort: any
   setSort: any
   Sort: any
 }
-export default ({ sort, setSort, Sort }: Props) => {
+const PokedexFilter = ({ sort, setSort, Sort }: Props) => {
   return (
     <Form>
       <Picker
@@ -29,3 +29,5 @@ export default ({ sort, setSort, Sort }: Props) => {
     </Form>
   )
 }
+
+export default PokedexFilter

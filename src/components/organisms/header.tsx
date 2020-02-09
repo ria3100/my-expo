@@ -1,12 +1,20 @@
 import React from 'react'
 import styled from '@emotion/native'
-import { Header, Title, Button, Left, Right, Body, Icon } from 'native-base'
+import {
+  Header as NBHeader,
+  Title,
+  Button,
+  Left,
+  Right,
+  Body,
+  Icon,
+} from 'native-base'
 
-const StyledHeader = styled(Header)(({ theme }) => ({
+const StyledHeader = styled(NBHeader)(({ theme }) => ({
   backgroundColor: theme.backgroundColor,
 }))
 
-export default () => {
+const Header = () => {
   return (
     <StyledHeader>
       <Left />
@@ -22,3 +30,5 @@ export default () => {
     </StyledHeader>
   )
 }
+
+export default Header

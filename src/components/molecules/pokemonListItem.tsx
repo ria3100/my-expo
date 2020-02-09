@@ -10,7 +10,7 @@ import { ListItem, Text, Left, Body, Right, Thumbnail } from 'native-base'
 type Props = {
   pokemon: any
 }
-export default ({ pokemon }: Props) => {
+const PokemonListItem = ({ pokemon }: Props) => {
   return (
     <ListItem icon style={{ borderColor: '#fff' }}>
       <Left>
@@ -31,3 +31,5 @@ export default ({ pokemon }: Props) => {
     </ListItem>
   )
 }
+
+export default PokemonListItem

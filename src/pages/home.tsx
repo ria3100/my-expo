@@ -1,10 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text } from 'react-native'
 import { Container, Content } from 'native-base'
 
-import { Header, Footer, PokemonList, Summary } from '../organisms'
+import { Header, Footer, PokemonList, Summary } from '../components/organisms'
+import { usePokedex } from '../hooks/pokedex'
 
-export default function App() {
+const Home = () => {
+  const { findPokemon } = usePokedex()
+  findPokemon()
   return (
     <Container>
       <Header />
@@ -17,9 +19,4 @@ export default function App() {
   )
 }
 
-const styles = StyleSheet.create({
-  text: {
-    marginTop: 100,
-    textAlign: 'center',
-  },
-})
+export default Home
