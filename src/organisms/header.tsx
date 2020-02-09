@@ -6,18 +6,19 @@ const StyledHeader = styled(Header)(({ theme }) => ({
   backgroundColor: theme.backgroundColor,
 }))
 
-export default function App() {
+export default () => {
   return (
     <StyledHeader>
-      <Left>
-        <Button transparent>
-          <Icon name="menu" />
-        </Button>
-      </Left>
+      <Left />
       <Body>
         <Title>Header</Title>
       </Body>
-      <Right />
+
+      <Right>
+        <Button transparent>
+          <Icon name="menu" />
+        </Button>
+      </Right>
     </StyledHeader>
   )
 }
