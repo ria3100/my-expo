@@ -19,14 +19,9 @@ export const usePokedex = () => {
     }
   }
 
-  const fetchList = () => {
-    db.collection('pokedex')
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          console.log(`${doc.id} => ${doc.data()}`)
-        })
-      })
+  const fetchList = async () => {
+    const snapShot = await db.collection('pokedex').get()
+    return snapShot.docs.map(doc => doc.data())
   }
 
   const findPokemon = async () => {

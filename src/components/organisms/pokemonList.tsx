@@ -2,7 +2,7 @@ import React from 'react'
 import { sortBy, groupBy } from 'lodash-es'
 import { List } from 'native-base'
 
-import data from '../../assets/pokemon'
+import { usePokedex } from '../../hooks/pokedex'
 
 import { PokedexFilter, ListItemDivider, PokemonListItem } from '../molecules'
 
@@ -14,13 +14,18 @@ enum Sort {
 }
 
 const PokemonList = () => {
+  const { fetchList } = usePokedex()
+  const data = fetchList()
+
   const [sort, setSort] = React.useState(Sort.Number)
 
-  const numberSort = React.useCallback(() => ({ 全て: sortBy(data, 'no') }), [])
+  const numberSort = React.useCallback(() => ({ 全て: sortBy(data, 'no') }), [
+    data,
+  ])
 
   const nameSort = React.useCallback(() => {
     return groupBy(sortBy(data, 'name'), pokemon => pokemon.name.charAt(0))
-  }, [])
+  }, [data])
 
   const list = React.useMemo(() => {
     switch (sort) {
